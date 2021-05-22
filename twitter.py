@@ -37,27 +37,27 @@ class Twitter:
                     dms.append(d)
                     dms.reverse()
             print(str(len(dms)) + " collected")
-            time.sleep(60)
+            time.sleep(30)
             return dms
             
         except Exception as ex:
             print(ex)
-            time.sleep(60)
+            time.sleep(30)
             pass
 
     def delete_dm(self, id):
         print("Deleting dm with id = "+ str(id))
         try:
             self.api.destroy_direct_message(id)
-            time.sleep(40)
+            time.sleep(20)
         except Exception as ex:
             print(ex)
-            time.sleep(40)
+            time.sleep(20)
             pass
     
     def post_tweet(self, tweet):
         self.api.update_status(tweet)
-        time.sleep(30)
+        time.sleep(15)
     
     def post_media(self, tweet, media_url):
         print("Downloading media...")
